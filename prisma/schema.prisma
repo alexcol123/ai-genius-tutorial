@@ -1,8 +1,9 @@
-
-
 // npx prisma generate
 // npx prisma db push
 // npx prisma studio
+
+// To delete all DB
+// npx prisma migrate reset
 
 datasource db {
   provider = "mongodb"
@@ -28,5 +29,4 @@ model UserSubscription {
   stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
   stripePriceId          String?   @map(name: "stripe_price_id")
   stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
-
 }

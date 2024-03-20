@@ -4,6 +4,7 @@ import OpenAI from "openai";
 import { incrementApiLimit, checkApiLimit } from '@/lib/api-limit'
 import { checkSubscription } from "@/lib/subscription";
 
+export const maxDuration = 100 // This function can run for a maximum of 300 seconds
 
 const openai = new OpenAI();
 
